@@ -58,8 +58,8 @@ func (l *LogMiddleware) Handle(
 			}
 		} else {
 			errStr, _ := json.Marshal(err)
-			_, err = debugFile.Write(errStr)
-			_, err = debugFile.WriteString("\n")
+			_, _ = debugFile.Write(errStr)
+			_, _ = debugFile.WriteString("\n")
 		}
 	}
 
